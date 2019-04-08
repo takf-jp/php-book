@@ -13,7 +13,7 @@ env:
 
 before_script:
   - composer self-update
-  - composer install --prefer-dist --no-interaction
+  - cd app && composer install --prefer-dist --no-interaction
   - mysql -u root -e 'CREATE DATABASE test;'
 
 script:
