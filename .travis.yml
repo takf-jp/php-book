@@ -12,6 +12,7 @@ env:
   - DATABASE_TEST_URL=mysql://root:@127.0.0.1/test
 
 before_script:
+  - composer self-update
   - composer install --prefer-dist --no-interaction
   - mysql -u root -e 'CREATE DATABASE test;'
 
